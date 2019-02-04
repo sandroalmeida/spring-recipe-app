@@ -80,7 +80,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>cd..
+            </plugin>
         </plugins>
     </build>
 
