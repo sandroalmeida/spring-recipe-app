@@ -80,15 +80,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <!--Note your version numbe might be different-->
-                <version>3.0.0-M3</version>
-                <configuration>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                </configuration>
-            </plugin>
+            </plugin>cd..
         </plugins>
     </build>
 
