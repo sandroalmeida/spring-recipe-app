@@ -1,0 +1,18 @@
+package info.sandroalmeida.springrecipeapp.commands;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+/**
+ * Created by sandro on 12/03/19
+ */
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class UnitOfMeasureCommand {
+
+    private Long id;
+    private String description;
+}
