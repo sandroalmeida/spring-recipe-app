@@ -1,5 +1,7 @@
 package info.sandroalmeida.springrecipeapp.services;
 
+import info.sandroalmeida.springrecipeapp.converters.RecipeCommandToRecipe;
+import info.sandroalmeida.springrecipeapp.converters.RecipeToRecipeCommand;
 import info.sandroalmeida.springrecipeapp.domain.Recipe;
 import info.sandroalmeida.springrecipeapp.repositories.RecipeRepository;
 import org.junit.Before;
@@ -22,11 +24,17 @@ public class RecipeServiceImplTest {
     @Mock
     RecipeRepository recipeRepository;
 
+    @Mock
+    RecipeToRecipeCommand recipeToRecipeCommand;
+
+    @Mock
+    RecipeCommandToRecipe recipeCommandToRecipe;
+
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
-        recipeService = new RecipeServiceImpl(recipeRepository);
+        recipeService = new RecipeServiceImpl(recipeRepository, recipeCommandToRecipe, recipeToRecipeCommand);
     }
 
     @Test
@@ -59,4 +67,5 @@ public class RecipeServiceImplTest {
         verify(recipeRepository, times(1)).findAll();
         verify(recipeRepository, never()).findById(anyLong());
     }
+
 }
