@@ -79,6 +79,4 @@ public class IngredientCommandToIngredientTest {
         assertEquals(AMOUNT, ingredient.getAmount());
         assertEquals(DESCRIPTION, ingredient.getDescription());
     }
-
-
 }

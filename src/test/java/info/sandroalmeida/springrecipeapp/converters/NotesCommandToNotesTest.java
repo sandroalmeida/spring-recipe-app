@@ -44,5 +44,4 @@ public class NotesCommandToNotesTest {
         assertEquals(ID_VALUE, notes.getId());
         assertEquals(RECIPE_NOTES, notes.getRecipeNotes());
     }
-
 }
